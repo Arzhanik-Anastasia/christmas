@@ -7,13 +7,11 @@ import '../../node_modules/nouislider/dist/nouislider.css';
 import gsap from 'gsap';
 import { IToy } from '../interfaces/interfaces';
 import renderTreePage from './Tree/Tree';
-import { description } from './description';
 import {
   allowedForms, allowedColors, allowedSizes, allowedFavorite, allowedFavoriteGrand,
   countFavorite, defaultSliderStartToys, defaultSliderEndToys, defaultSliderStartYear, defaultSliderEndYear,
 } from './helpers/variables';
 
-description();
 const homePage = document.querySelector('.start-page')!;
 const toysPage = document.querySelector('.toys-page')!;
 const treePage = document.querySelector('.tree-page')!;
