@@ -1,0 +1,436 @@
+:root {
+  --color-text: antiquewhite;
+  --dark-green: #0f2204;
+  --light-green: #73967e;
+}
+
+.tree-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  max-width: 1600px;
+  height: calc(100vh - 140px);
+  min-height: 750px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.snow-audio {
+  display: flex;
+}
+
+.audio,
+.snow {
+  cursor: pointer;
+  filter: sepia(16%) saturate(1598%) hue-rotate(339deg) brightness(100%)
+    contrast(96%);
+}
+
+.audio.active,
+.snow.active {
+  filter: invert(58%) sepia(20%) saturate(427%) hue-rotate(86deg)
+    brightness(93%) contrast(81%);
+}
+.tree-menu,
+.tree-menu-container
+/* .menu-favorite */ {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  height: 100%;
+  width: 400px;
+  padding-top: 25px;
+}
+.menu-favorite {
+  height: calc(100vh - 140px);
+  min-height: 750px;
+  width: 400px;
+}
+
+.audio {
+  background: url(../../assets/svg/audio.svg);
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+}
+.snow {
+  background: url(../../assets/svg/snow.svg);
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  margin-left: 20px;
+}
+
+.change-tree,
+.change-background,
+.change-girland {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.change-girland::before {
+  content: "Гирлянда";
+}
+
+.change-tree__title,
+.change-background__title,
+.change-girland__title {
+  width: 100%;
+}
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.change-girland {
+  margin-bottom: 20px;
+}
+
+.menu-container::before {
+  content: "Выберите ёлку";
+}
+.tree__title::before {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+
+.tree-item {
+  width: 115px;
+  height: 115px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size: auto 110px;
+  background-repeat: no-repeat;
+  background-position: center;
+  gap: 20px;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.tree-item.active {
+  border: 2px solid var(--dark-green);
+}
+
+.tree-item:nth-child(1) {
+  background-image: url("../../assets/tree/1.png");
+}
+.tree-item:nth-child(2) {
+  background-image: url("../../assets/tree/2.png");
+}
+.tree-item:nth-child(3) {
+  background-image: url("../../assets/tree/3.png");
+}
+.tree-item:nth-child(4) {
+  background-image: url("../../assets/tree/4.png");
+}
+.tree-item:nth-child(5) {
+  background-image: url("../../assets/tree/5.png");
+}
+.tree-item:nth-child(6) {
+  background-image: url("../../assets/tree/6.png");
+}
+
+.change-background::before {
+  content: "Выберите фон";
+}
+
+.background-item:nth-child(1) {
+  background-image: url(../../assets/background/1.jpg);
+}
+.background-item:nth-child(2) {
+  background-image: url(../../assets/background/2.jpg);
+}
+
+.background-item:nth-child(3) {
+  background-image: url(../../assets/background/3.jpg);
+}
+
+.background-item:nth-child(4) {
+  background-image: url(../../assets/background/4.jpg);
+}
+
+.background-item:nth-child(5) {
+  background-image: url(../../assets/background/5.jpg);
+}
+
+.background-item:nth-child(6) {
+  background-image: url(../../assets/background/6.jpg);
+}
+
+.background-item:nth-child(7) {
+  background-image: url(../../assets/background/7.jpg);
+}
+
+.background-item:nth-child(8) {
+  background-image: url(../../assets/background/8.jpg);
+}
+
+.background-item:nth-child(9) {
+  background-image: url(../../assets/background/9.jpg);
+}
+
+.background-item:nth-child(10) {
+  background-image: url(../../assets/background/10.jpg);
+}
+
+.background-item {
+  width: 65px;
+  height: 65px;
+  border: 2px solid #cccc;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.background-item.active {
+  border: 2px solid var(--dark-green);
+}
+.girland-item {
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--dark-green);
+  margin: 3px;
+}
+.girland-item.active {
+  border: 2px solid var(#cccc);
+  transform: scale(1.3);
+}
+.girland-item:nth-child(1) {
+  background: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8
+  );
+}
+
+.girland-item:nth-child(2) {
+  background: rgba(247, 0, 118, 1);
+}
+
+.girland-item:nth-child(3) {
+  background: rgba(0, 255, 255, 1);
+}
+.girland-item:nth-child(4) {
+  background: rgba(0, 247, 165, 1);
+}
+
+.girland-item:nth-child(5) {
+  background: rgba(255, 255, 0, 1);
+}
+
+.girland-label {
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  width: 50px;
+  margin-left: 30px;
+}
+
+#checkbox {
+  display: none;
+}
+.slider {
+  background-color: var(--light-green);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+#girland-checkbox:checked + .slider {
+  background-color: var(--dark-green);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+#girland-checkbox:checked + .slider:before {
+  transform: translateX(26px);
+}
+#girland-checkbox:checked + .slider:before {
+  transform: translateX(26px);
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+.slider:before {
+  background-color: #fff;
+  bottom: 2px;
+  content: "";
+  height: 20px;
+  left: 2px;
+  position: absolute;
+  transition: 0.4s;
+  width: 19px;
+}
+/*background tree*/
+.tree-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url(../../assets/background/1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 140px);
+  min-height: 750px;
+  width: 800px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  /*   position: relative; */
+}
+
+.tree-image {
+  display: block;
+}
+/*favor-toys*/
+.favorite__toys,
+.favorite__tree {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+.favorite__toys::before {
+  content: "Игрушки";
+}
+
+.favorite__toys::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+  background-color: var(--light-green);
+  backdrop-filter: blur(6px);
+}
+
+.favorite__toys::-webkit-scrollbar-thumb {
+  background-color: var(--dark-green);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-item-toys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.item-toys-count {
+  z-index: 10;
+  align-self: flex-end;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  border-radius: 10px;
+  background-color: var(--dark-green);
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.item-toys-img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: block;
+  object-fit: contain;
+  cursor: move;
+}
+.favorite__tree {
+  overflow-x: auto;
+}
+.favorite__tree::before {
+  content: "Вы нарядили";
+}
+.container-tree-decorate {
+  display: flex;
+  gap: 10px;
+  height: 140px;
+  margin-top: 20px;
+  width: 400px;
+}
+
+.tree-decorate {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  height: 115px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--color-text);
+  cursor: pointer;
+}
+
+.tree-decorate img {
+  height: 110px;
+  width: 100px;
+}
+
+.favorite__tree::-webkit-scrollbar {
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--light-green);
+  backdrop-filter: blur(6px);
+}
+
+.favorite__tree::-webkit-scrollbar-thumb {
+  background-color: var(--dark-green);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset,
+.save__tree {
+  border: none;
+  padding: 15px 10px;
+  margin: 0 auto;
+  width: 150px;
+  background-color: var(--dark-green);
+  color: var(--color-text);
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}

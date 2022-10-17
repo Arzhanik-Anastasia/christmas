@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/jpg/favicon.png" rel="shortcut icon" />
+  </head>
+  <body id="app">
+   <header class="header">
+      <div class="container header__container">
+        <nav class="nav">
+          <a class="header__logo" href="/" data-link></a>
+          <a href="#" class="switch-page-game header__link active" data-link
+            >Игрушки</a
+          >
+          <a href="#" class="switch-page-tree header__link" data-link
+            >Ёлка</a
+          >
+        </nav>
+        <div class="snow-audio">
+          <div class="audio hidden"></div>
+          <div class="snow hidden"></div>
+        </div>
+        <div class="header__controls">
+          <input type="search" class="header__search hidden" autofocus placeholder="Поиск"/>
+          <div class="header__select">0</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page start-page">
+      <h1 class="start-page__title">
+        Новогодняя игра<span>"Наряди ёлочку"</span>
+      </h1>
+      <button class="switch-start-page">Начать</button>
+    </div>
+
+     <div class="page toys-page hidden">
+      <div class="background">
+        <div class="container">
+          <div class="toys-page__controls">
+            <div class="controls__filters controls-block">
+              <h2 class="filters__title controls__title">
+                Фильтры по значению
+              </h2>
+              <div class="controls__forms">
+                Форма:
+                <button class="forms-item ball" data-filter="шар"></button>
+                <button
+                  class="forms-item bell"
+                  data-filter="колокольчик"
+                ></button>
+                <button class="forms-item bump" data-filter="шишка"></button>
+                <button
+                  class="forms-item snowflake"
+                  data-filter="снежинка"
+                ></button>
+                <button
+                  class="forms-item figure"
+                  data-filter="фигурка"
+                ></button>
+              </div>
+
+              <div class="controls__colors">
+                Цвет:
+                <button class="colors-item white" data-color="белый"></button>
+                <button class="colors-item yellow" data-color="желтый"></button>
+                <button class="colors-item red" data-color="красный"></button>
+                <button class="colors-item blue" data-color="синий"></button>
+                <button class="colors-item green" data-color="зелёный"></button>
+              </div>
+              <div class="controls__sizes">
+                Размер:
+                <div class="sizes-item small" data-size="малый"></div>
+                <div class="sizes-item medium" data-size="средний"></div>
+                <div class="sizes-item big" data-size="большой"></div>
+              </div>
+              <div class="controls__favorite">
+                Только любимые:
+                <input
+                  type="checkbox"
+                  class="favorite-toys-input"
+                  id="favorite-checkbox"
+                />
+                <label
+                  for="favorite-checkbox"
+                  class="favorite-toys-label"
+                ></label>
+              </div>
+              <div class="controls__favorite">
+                Любимые игрушки бабушки:
+                <input
+                  type="checkbox"
+                  class="favorite-toys-input-grand"
+                  id="favorite-checkbox-grand"
+                />
+                <label
+                  for="favorite-checkbox-grand"
+                  class="favorite-toys-label-grand"
+                ></label>
+              </div>
+            </div>
+
+            <div class="controls__shape controls-block">
+              <h2 class="shape__title controls__title">Фильтры по диапозону</h2>
+              <div class="count">
+                <h6 class="count__title">Количество</h6>
+                <div class="count-slider-container">
+                  <output class="slider-output start-count-toys">1</output>
+                  <div id="count-slider"></div>
+                  <output class="slider-output end-count-toys">12</output>
+                </div>
+              </div>
+              <div class="year">
+                <h6 class="year__title">Год приобретения:</h6>
+                <div class="year-slider-container">
+                  <output class="slider-output start-year">1940</output>
+                  <div id="year-slider"></div>
+                  <output class="slider-output end-year">2020</output>
+                </div>
+              </div>
+            </div>
+
+            <div class="controls__sort controls-block">
+              <h2 class="sort__title controls__title">Сортировка</h2>
+              <div class="select">
+                <select class="sort-select">
+                  <option selected="" value="sort-name-max">
+                    По названию от «А» до «Я»
+                  </option>
+                  <option value="sort-name-min">
+                    По названию от «Я» до «А»
+                  </option>
+                  <option value="sort-year-max">
+                    По году покупки по возрастанию
+                  </option>
+                  <option value="sort-year-min">
+                    По году покупки по убыванию
+                  </option>
+                </select>
+              </div>
+              <div class="buttons">
+                <button class="btn-reset">Сбросить фильтры</button>
+                <button class="clear">Очистить избранные</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-container"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page tree-page hidden"></div>
+    <footer class="footer">
+      <div class="footer-wrapper container">
+        <a href="https://rs.school/js/" target="_blank"
+          ><img
+            src="./assets/svg/rss.svg"
+            alt="logo RS-School"
+            width="70"
+            height="70"
+        /></a>
+        <p>Arzhanik Anastasia &copy;</p>
+        <a href="https://github.com/Arzhanik-Anastasia" target="_blank"
+          ><img
+            src="./assets/jpg/github.png"
+            alt="logo github"
+            width="50"
+            height="50"
+        /></a>
+      </div>
+    </footer>
+      <div class="modal-overlay"></div>
+    <div class="modal">
+      К сожалению у Вас уже много любимых игрушек
+      <span class="close"></span>
+    </div>
+    <audio class="music" src="./assets/audio/audio.mp3">
+  </body>
+</html>

@@ -1,0 +1,74 @@
+.snowflakes {
+  height: calc(100vh - 50px);
+  width: 800px;
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  margin-left: -400px;
+  pointer-events: none;
+  z-index: 100;
+  overflow: hidden;
+}
+.snowflakes.active {
+  overflow: hidden;
+  background-size: cover;
+}
+.snow1.active {
+  background-image: url("./../../assets/jpg/snow1.png");
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  animation: snow1 18s linear infinite;
+}
+
+.snow2.active {
+  background-image: url("./../../assets/jpg/snow2.png");
+  animation: snow2 10s linear infinite;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+}
+.snow3.active {
+  background-image: url("./../../assets/jpg/snow3.png");
+  animation: snow3 10s linear infinite;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+}
+@keyframes snow2 {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 10% 600px, 10% 600px;
+  }
+}
+@keyframes snow1 {
+  from {
+    background-position: 0 -300px;
+  }
+  20% {
+    background-position: 20% -100px;
+  }
+  40% {
+    background-position: 30% 100px;
+  }
+  to {
+    background-position: 20% 700px;
+  }
+}
+
+@keyframes snow3 {
+  from {
+    background-position: 0 -300px;
+  }
+  20% {
+    background-position: 20% -100px;
+  }
+  40% {
+    background-position: 30% 100px;
+  }
+  to {
+    background-position: 20% 700px;
+  }
+}
